@@ -26,6 +26,8 @@ function loadHtml() {
     console.log("loading index.html...");
     html = fs.readFileSync("static/index.html", "utf-8");
     console.log("loaded");
+    console.log(process.env);
+    console.log(html);
   }
 
   return html;
