@@ -52,6 +52,8 @@ const getRestaurants = async () => {
     httpReq.set("X-Amz-Security-Token", opts.headers["X-Amz-Security-Token"]);
   }
 
+  console.log(httpReq);
+
   return (await httpReq).body;
 };
 
