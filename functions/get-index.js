@@ -53,6 +53,7 @@ const getRestaurants = async () => {
   }
 
   console.log(httpReq);
+  console.log(opts);
 
   return (await httpReq).body;
 };
