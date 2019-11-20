@@ -4,6 +4,8 @@ const http = require("superagent-promise")(require("superagent"), Promise);
 const aws4 = require("aws4");
 const URL = require("url");
 
+const Log = require("@dazn/lambda-powertools-logger");
+
 const restaurantsApiRoot = process.env.restaurants_api;
 const days = [
   "Sunday",
@@ -25,11 +27,11 @@ let html;
 
 function loadHtml() {
   if (!html) {
-    console.log("loading index.html...");
+    Log.info("loading index.html...");
     html = fs.readFileSync("static/index.html", "utf-8");
-    console.log("loaded");
-    //console.log(process.env);
-    //console.log(html);
+    Log.info("loaded");
+    //Log.info(process.env);
+    //Log.info(html);
   }
 
   return html;
@@ -54,10 +56,10 @@ const getRestaurants = async () => {
     httpReq.set("X-Amz-Security-Token", opts.headers["X-Amz-Security-Token"]);
   }
 
-  //console.log(httpReq);
-  console.log("opts");
-  console.log(opts);
-  console.log("opts");
+  //Log.info(httpReq);
+  Log.info("opts");
+  Log.info(opts);
+  Log.info("opts");
 
   return (await httpReq).body;
 };
