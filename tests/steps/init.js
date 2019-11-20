@@ -21,6 +21,8 @@ const init = async () => {
   process.env.AWS_SECRET_ACCESS_KEY = credentials.secretAccessKey;
 
   console.log("AWS credential loaded");
+  console.log(credentials);
+  console.log("AWS credential loaded");
 
   initialized = true;
 };
