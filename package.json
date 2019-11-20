@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sls":  "serverless",
     "test": "mocha tests/test_cases --reporter spec"  },
   "author": "",
   "license": "ISC",

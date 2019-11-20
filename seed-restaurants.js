@@ -54,7 +54,7 @@ let putReqs = restaurants.map(x => ({
 
 let req = {
   RequestItems: {
-    "restaurants-pni": putReqs
+    "workshop-pni": putReqs
   }
 };
 dynamodb
