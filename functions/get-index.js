@@ -26,8 +26,8 @@ function loadHtml() {
     console.log("loading index.html...");
     html = fs.readFileSync("static/index.html", "utf-8");
     console.log("loaded");
-    console.log(process.env);
-    console.log(html);
+    //console.log(process.env);
+    //console.log(html);
   }
 
   return html;
@@ -52,8 +52,10 @@ const getRestaurants = async () => {
     httpReq.set("X-Amz-Security-Token", opts.headers["X-Amz-Security-Token"]);
   }
 
-  console.log(httpReq);
+  //console.log(httpReq);
+  console.log("opts");
   console.log(opts);
+  console.log("opts");
 
   return (await httpReq).body;
 };
