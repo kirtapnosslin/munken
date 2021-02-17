@@ -4,7 +4,11 @@
     "description": "hej hej"
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "ölaksdöalskd"
+      }
+    ],
     "diagrams": [
       {
         "title": "kokok",
